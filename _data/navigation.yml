@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  #- title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -11,6 +11,6 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
   
-  sidebar:
-    title: "Sample Title"
-    nav: sidebar-sample
+sidebar:
+  title: "Sample Title"
+  nav: sidebar-sample
