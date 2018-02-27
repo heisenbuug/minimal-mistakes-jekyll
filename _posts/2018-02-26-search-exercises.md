@@ -16,7 +16,7 @@ Choose a formulation that is precise enough to be implemented.
     any $$x$$. For example, ABBC can be transformed into AEC, and then AC,
     and then E. Your goal is to produce the sequence E.
 
-3.  There is an $$n\timen$$ grid of squares, each square initially
+3.  There is an $$n \times n$$ grid of squares, each square initially
     being either unpainted floor or a bottomless pit. You start standing
     on an unpainted floor square, and can either paint the square under
     you or move onto an adjacent unpainted floor square. You want the
