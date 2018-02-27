@@ -12,11 +12,11 @@ Choose a formulation that is precise enough to be implemented.
 
 2.  You start with the sequence ABABAECCEC, or in general any sequence
     made from A, B, C, and E. You can transform this sequence using the
-    following equalities: AC = E, AB = BC, BB = E, and E$x$ = $x$ for
-    any $x$. For example, ABBC can be transformed into AEC, and then AC,
+    following equalities: AC = E, AB = BC, BB = E, and E$$x$$ = $$x$$ for
+    any $$x$$. For example, ABBC can be transformed into AEC, and then AC,
     and then E. Your goal is to produce the sequence E.
 
-3.  There is an $n \times n$ grid of squares, each square initially
+3.  There is an $$n \times n$$ grid of squares, each square initially
     being either unpainted floor or a bottomless pit. You start standing
     on an unpainted floor square, and can either paint the square under
     you or move onto an adjacent unpainted floor square. You want the
@@ -48,10 +48,10 @@ distance, although it will stop before hitting a wall.
     the real world, restricting actions and removing details. List three
     such simplifications we made.
 
-**3.4** You have a $9 \times 9$ grid of squares, each of which can be colored
+**3.4** You have a $$9 \times 9$$ grid of squares, each of which can be colored
 red or blue. The grid is initially colored all blue, but you can change
 the color of any square any number of times. Imagining the grid divided
-into nine $3 \times 3$ sub-squares, you want each sub-square to be all
+into nine $$3 \times 3$$ sub-squares, you want each sub-square to be all
 one color but neighboring sub-squares to be different colors.
 
 1.  Formulate this problem in the straightforward way. Compute the size
@@ -76,8 +76,8 @@ one color but neighboring sub-squares to be different colors.
 **3.5** \[two-friends-exercise\]Suppose two friends live in different cities on
 a map, such as the Romania map shown in . On every turn, we can
 simultaneously move each friend to a neighboring city on the map. The
-amount of time needed to move from city $i$ to neighbor $j$ is equal to
-the road distance $d(i,j)$ between the cities, but on each turn the
+amount of time needed to move from city $$i$$ to neighbor $$j$$ is equal to
+the road distance $$d(i,j)$$ between the cities, but on each turn the
 friend that arrives first must wait until the other one arrives (and
 calls the first on his/her cell phone) before the next turn can begin.
 We want the two friends to meet as quickly as possible.
@@ -85,9 +85,9 @@ We want the two friends to meet as quickly as possible.
 1.  Write a detailed formulation for this search problem. (You will find
     it helpful to define some formal notation here.)
 
-2.  Let $D(i,j)$ be the straight-line distance between cities $i$ and
-    $j$. Which of the following heuristic functions are admissible? (i)
-    $D(i,j)$; (ii) $2\cdot D(i,j)$; (iii) $D(i,j)/2$.
+2.  Let $$D(i,j)$$ be the straight-line distance between cities $$i$$ and
+    $$j$$. Which of the following heuristic functions are admissible? (i)
+    $$D(i,j)$$; (ii) $$2\cdot D(i,j)$$; (iii) $$D(i,j)/2$$.
 
 3.  Are there completely connected maps for which no solution exists?
 
@@ -101,9 +101,9 @@ other set. (*Hint:* See @Berlekamp+al:1982.) Devise a procedure to decide
 which set a given state is in, and explain why this is useful for
 generating random states.
 
-**3.7** \[nqueens-size-exercise\] Consider the $n$-queens problem using the
+**3.7** \[nqueens-size-exercise\] Consider the $$n$$-queens problem using the
 “efficient” incremental formulation given on page [nqueens-page](#/). Explain why the state
-space has at least $\sqrt[3]{n!}$ states and estimate the largest $n$
+space has at least $$\sqrt[3]{n!}$$ states and estimate the largest $$n$$
 for which exhaustive exploration is feasible. (*Hint*:
 Derive a lower bound on the branching factor by considering the maximum
 number of squares that a queen can attack in any column.)
@@ -133,7 +133,7 @@ path between two points on a plane that has convex polygonal obstacles
 as shown in . This is an idealization of the problem that a robot has to
 solve to navigate in a crowded environment.
 
-1.  Suppose the state space consists of all positions $(x,y)$ in
+1.  Suppose the state space consists of all positions $$(x,y)$$ in
     the plane. How many states are there? How many paths are there to
     the goal?
 
@@ -161,7 +161,7 @@ more depth.
     explore the entire state space.
 
 2.  Does it help if we insist that step costs must be greater than or
-    equal to some negative constant $c$? Consider both trees and graphs.
+    equal to some negative constant $$c$$? Consider both trees and graphs.
 
 3.  Suppose that a set of actions forms a loop in the state space such
     that executing the set in some order results in no net change to
@@ -232,7 +232,7 @@ answers.
 1.  Depth-first search always expands at least as many nodes as A search
     with an admissible heuristic.
 
-2.  $h(n)=0$ is an admissible heuristic for the 8-puzzle.
+2.  $$h(n)=0$$ is an admissible heuristic for the 8-puzzle.
 
 3.  A is of no use in robotics because percepts, states, and actions
     are continuous.
@@ -247,7 +247,7 @@ answers.
     number of moves.
 
 **3.18** Consider a state space where the start state is number 1 and each state
-$k$ has two successors: numbers $2k$ and $2k+1$.
+$$k$$ has two successors: numbers $$2k$$ and $$2k+1$$.
 
 1.  Draw the portion of the state space for states 1 to 15.
 
@@ -262,8 +262,8 @@ $k$ has two successors: numbers $2k$ and $2k+1$.
     would allow you to solve the problem of getting from state 1 to a
     given goal state with almost no search?
 
-5.  Call the action going from $k$ to $2k$ Left, and the action going to
-    $2k+1$ Right. Can you find an algorithm that outputs the solution to
+5.  Call the action going from $$k$$ to $$2k$$ Left, and the action going to
+    $$2k+1$$ Right. Can you find an algorithm that outputs the solution to
     this problem without any search at all?
 
 **3.19** \[brio-exercise\]A basic wooden railway set contains the pieces shown in
@@ -287,7 +287,7 @@ the floor.
     pretending that every piece is unique.)
 
 **3.20** Implement two versions of the function for the 8-puzzle: one that copies
-and edits the data structure for the parent node $s$ and one that
+and edits the data structure for the parent node $$s$$ and one that
 modifies the parent state directly (undoing the modifications as
 needed). Write versions of iterative deepening depth-first search that
 use these functions and compare their performance.
@@ -302,12 +302,12 @@ iteration.
 
 1.  Show that this algorithm is optimal for general path costs.
 
-2.  Consider a uniform tree with branching factor $b$, solution depth
-    $d$, and unit step costs. How many iterations will iterative
+2.  Consider a uniform tree with branching factor $$b$$, solution depth
+    $$d$$, and unit step costs. How many iterations will iterative
     lengthening require?
 
 3.  Now consider step costs drawn from the continuous range
-    $[\epsilon,1]$, where $0 < \epsilon < 1$. How many iterations are
+    $$[\epsilon,1]$$, where $$0 < \epsilon < 1$$. How many iterations are
     required in the worst case?
 
 4.  Implement the algorithm and apply it to instances of the 8-puzzle
@@ -316,7 +316,7 @@ iteration.
     your results.
 
 **3.22** Describe a state space in which iterative deepening search performs much
-worse than depth-first search (for example, $O(n^{2})$ vs. $O(n)$).
+worse than depth-first search (for example, $$O(n^{2})$$ vs. $$O(n)$$).
 
 **3.23** Write a program that will take as input two Web page URLs and find a
 path of links from one to the other. What is an appropriate search
@@ -330,11 +330,11 @@ used to implement a predecessor function?
     search?
 
 2.  Apply your chosen algorithm to compute an optimal sequence of
-    actions for a $3\times 3$ world whose initial state has dirt in the
+    actions for a $$3\times 3$$ world whose initial state has dirt in the
     three top squares and the agent in the center.
 
 3.  Construct a search agent for the vacuum world, and evaluate its
-    performance in a set of $3\times 3$ worlds with probability 0.2 of
+    performance in a set of $$3\times 3$$ worlds with probability 0.2 of
     dirt in each square. Include the search cost as well as path cost in
     the performance measure, using a reasonable exchange rate.
 
@@ -342,8 +342,8 @@ used to implement a predecessor function?
     that sucks if there is dirt and otherwise moves randomly.
 
 5.  Consider what would happen if the world were enlarged to
-    $n \times n$. How does the performance of the search agent and of
-    the reflex agent vary with $n$?
+    $$n \times n$$. How does the performance of the search agent and of
+    the reflex agent vary with $$n$$?
 
 **3.25** \[search-special-case-exercise\] Prove each of the following statements,
 or give a counterexample:
@@ -363,7 +363,7 @@ when a small random number is added to the heuristic values in the
 **3.27** Trace the operation of A search applied to the problem of getting to
 Bucharest from Lugoj using the straight-line distance heuristic. That
 is, show the sequence of nodes that the algorithm will consider and the
-$f$, $g$, and $h$ score for each node.
+$$f$$, $$g$$, and $$h$$ score for each node.
 
 **3.28** Sometimes there is no good evaluation function for a problem but there
 is a good comparison method: a way to tell whether one node is better
@@ -372,27 +372,27 @@ this is enough to do a best-first search. Is there an analog of A for
 this setting?
 
 **3.29** \[a\*-failure-exercise\]Devise a state space in which A using returns a
-suboptimal solution with an $h(n)$ function that is admissible but
+suboptimal solution with an $$h(n)$$ function that is admissible but
 inconsistent.
 
 **3.30** Accurate heuristics don’t necessarily reduce search time in the worst
-case. Given any depth $d$, define a search problem with a goal node at
-depth $d$, and write a heuristic function such that $|h(n) -
- h^*(n)| \le O(\log h^*(n))$ but A$^*$ expands all nodes of depth less
-than $d$.
+case. Given any depth $$d$$, define a search problem with a goal node at
+depth $$d$$, and write a heuristic function such that $$|h(n) -
+ h^*(n)| \le O(\log h^*(n))$$ but A$$^*$$ expands all nodes of depth less
+than $$d$$.
 
 **3.31** The **heuristic path algorithm** @Pohl:1977 is a best-first search in which the evaluation function
-is $f(n) =
-(2-w)g(n) + wh(n)$. For what values of $w$ is this complete? For what
-values is it optimal, assuming that $h$ is admissible? What kind of
-search does this perform for $w=0$, $w=1$, and $w=2$?
+is $$f(n) =
+(2-w)g(n) + wh(n)$$. For what values of $$w$$ is this complete? For what
+values is it optimal, assuming that $$h$$ is admissible? What kind of
+search does this perform for $$w=0$$, $$w=1$$, and $$w=2$$?
 
 **3.32** Consider the unbounded version of the regular 2D grid shown in . The
-start state is at the origin, (0,0), and the goal state is at $(x,y)$.
+start state is at the origin, (0,0), and the goal state is at $$(x,y)$$.
 
-1.  What is the branching factor $b$ in this state space?
+1.  What is the branching factor $$b$$ in this state space?
 
-2.  How many distinct states are there at depth $k$ (for $k>0$)?
+2.  How many distinct states are there at depth $$k$$ (for $$k>0$$)?
 
 3.  What is the maximum number of nodes expanded by breadth-first tree
     search?
@@ -400,62 +400,62 @@ start state is at the origin, (0,0), and the goal state is at $(x,y)$.
 4.  What is the maximum number of nodes expanded by breadth-first graph
     search?
 
-5.  Is $h = |u-x| + |v-y|$ an admissible heuristic for a state at
-    $(u,v)$? Explain.
+5.  Is $$h = |u-x| + |v-y|$$ an admissible heuristic for a state at
+    $$(u,v)$$? Explain.
 
-6.  How many nodes are expanded by A graph search using $h$?
+6.  How many nodes are expanded by A graph search using $$h$$?
 
-7.  Does $h$ remain admissible if some links are removed?
+7.  Does $$h$$ remain admissible if some links are removed?
 
-8.  Does $h$ remain admissible if some links are added between
+8.  Does $$h$$ remain admissible if some links are added between
     nonadjacent states?
 
-**3.33** $n$ vehicles occupy squares $(1,1)$ through $(n,1)$ (i.e., the bottom
-row) of an $n\times n$ grid. The vehicles must be moved to the top row
-but in reverse order; so the vehicle $i$ that starts in $(i,1)$ must end
-up in $(n-i+1,n)$. On each time step, every one of the $n$ vehicles can
+**3.33** $$n$$ vehicles occupy squares $$(1,1)$$ through $$(n,1)$$ (i.e., the bottom
+row) of an $$n\times n$$ grid. The vehicles must be moved to the top row
+but in reverse order; so the vehicle $$i$$ that starts in $$(i,1)$$ must end
+up in $$(n-i+1,n)$$. On each time step, every one of the $$n$$ vehicles can
 move one square up, down, left, or right, or stay put; but if a vehicle
 stays put, one other adjacent vehicle (but not more than one) can hop
 over it. Two vehicles cannot occupy the same square.
 
-1.  Calculate the size of the state space as a function of $n$.
+1.  Calculate the size of the state space as a function of $$n$$.
 
-2.  Calculate the branching factor as a function of $n$.
+2.  Calculate the branching factor as a function of $$n$$.
 
-3.  Suppose that vehicle $i$ is at $(x_i,y_i)$; write a nontrivial
-    admissible heuristic $h_i$ for the number of moves it will require
-    to get to its goal location $(n-i+1,n)$, assuming no other vehicles
+3.  Suppose that vehicle $$i$$ is at $$(x_i,y_i)$$; write a nontrivial
+    admissible heuristic $$h_i$$ for the number of moves it will require
+    to get to its goal location $$(n-i+1,n)$$, assuming no other vehicles
     are on the grid.
 
 4.  Which of the following heuristics are admissible for the problem of
-    moving all $n$ vehicles to their destinations? Explain.
+    moving all $$n$$ vehicles to their destinations? Explain.
 
-    1.  $\sum_{i= 1}^{n} h_i$.
+    1.  $$\sum_{i= 1}^{n} h_i$$.
 
-    2.  $\max\{h_1,\ldots,h_n\}$.
+    2.  $$\max\{h_1,\ldots,h_n\}$$.
 
-    3.  $\min\{h_1,\ldots,h_n\}$.
+    3.  $$\min\{h_1,\ldots,h_n\}$$.
 
-**3.34** Consider the problem of moving $k$ knights from $k$ starting squares
-$s_1,\ldots,s_k$ to $k$ goal squares $g_1,\ldots,g_k$, on an unbounded
+**3.34** Consider the problem of moving $$k$$ knights from $$k$$ starting squares
+$$s_1,\ldots,s_k$$ to $$k$$ goal squares $$g_1,\ldots,g_k$$, on an unbounded
 chessboard, subject to the rule that no two knights can land on the same
 square at the same time. Each action consists of moving *up
-to* $k$ knights simultaneously. We would like to complete the
+to* $$k$$ knights simultaneously. We would like to complete the
 maneuver in the smallest number of actions.
 
 1.  What is the maximum branching factor in this state space, expressed
-    as a function of $k$?
+    as a function of $$k$$?
 
-2.  Suppose $h_i$ is an admissible heuristic for the problem of moving
-    knight $i$ to goal $g_i$ by itself. Which of the following
-    heuristics are admissible for the $k$-knight problem? Of those,
+2.  Suppose $$h_i$$ is an admissible heuristic for the problem of moving
+    knight $$i$$ to goal $$g_i$$ by itself. Which of the following
+    heuristics are admissible for the $$k$$-knight problem? Of those,
     which is the best?
 
-    1.  $\min\{h_1,\ldots,h_k\}$.
+    1.  $$\min\{h_1,\ldots,h_k\}$$.
 
-    2.  $\max\{h_1,\ldots,h_k\}$.
+    2.  $$\max\{h_1,\ldots,h_k\}$$.
 
-    3.  $\sum_{i= 1}^{k} h_i$.
+    3.  $$\sum_{i= 1}^{k} h_i$$.
 
 3.  Repeat (b) for the case where you are allowed to move only one
     knight at a time.
@@ -469,9 +469,9 @@ misleading in both directions?
 **3.36** Invent a heuristic function for the 8-puzzle that sometimes
 overestimates, and show how it can lead to a suboptimal solution on a
 particular problem. (You can use a computer to help if you want.) Prove
-that if $h$ never overestimates by more than $c$, A using $h$ returns a
+that if $$h$$ never overestimates by more than $$c$$, A using $$h$$ returns a
 solution whose cost exceeds that of the optimal solution by no more than
-$c$.
+$$c$$.
 
 **3.37** \[consistent-heuristic-exercise\]Prove that if a heuristic is
 consistent, it must be admissible. Construct an admissible heuristic
@@ -497,8 +497,8 @@ the link costs of any tree that connects all the cities.
 **3.39** \[Gaschnig-h-exercise\]On page [Gaschnig-h-page](#/) , we defined the relaxation of the 8-puzzle in
 which a tile can move from square A to square B if B is blank. The exact
 solution of this problem defines **Gaschnig's heuristic** @Gaschnig:1979. Explain why Gaschnig’s
-heuristic is at least as accurate as $h_1$ (misplaced tiles), and show
-cases where it is more accurate than both $h_1$ and $h_2$ (Manhattan
+heuristic is at least as accurate as $$h_1$$ (misplaced tiles), and show
+cases where it is more accurate than both $$h_1$$ and $$h_2$$ (Manhattan
 distance). Explain how to calculate Gaschnig’s heuristic efficiently.
 
 **3.40** We gave two simple heuristics for the 8-puzzle: Manhattan distance and
@@ -507,4 +507,3 @@ on this—see, for example, @Nilsson:1971,
 @Mostow+Prieditis:1989, and @Hansson+al:1992. Test these claims by implementing
 the heuristics and comparing the performance of the resulting
 algorithms.
-
