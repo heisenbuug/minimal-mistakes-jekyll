@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 theme: minimal-mistakes-jekyll
-markdown: kramdown
+markdown: redcarpet
 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -165,7 +165,7 @@ _ext: "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
